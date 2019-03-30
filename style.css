@@ -1,0 +1,86 @@
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+    display: grid;
+    grid-template-columns: 1fr, minmax(auto, 80rem) 1fr;
+    grid-template-rows: 6rem 1fr auto;
+    grid-template-areas:
+      ". header ."
+      ". main ."
+      ". footer .";
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+img {
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    }
+
+.header {
+    grid-area: header;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background: white;
+    padding: 0 1rem;
+}
+
+    .navigation {
+               
+    } 
+
+    .navigation-items {
+        display: flex;
+        justify-content: flex-start;
+        list-style: none;
+    }
+    
+    .nav-link {
+        text-decoration: none;
+        color: black;
+    }
+
+    .header_bmwcountry {
+    
+    }
+
+.main {
+    grid-area: main;
+}
+
+.herogrid {
+    display: grid;
+    grid-template-columns: repeat(2, 50rem);
+    grid-template-rows: repeat(2, 40rem);
+    grid-template-areas:
+    "upperone upperone"
+    "videoleft videoright";
+}
+
+.to-watch-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 30rem);
+    grid-auto-rows: 17rem;
+    grid-template-areas:
+    "acceleration       acceleration    advice1"
+    "acceleration       acceleration    design"
+    "selfdrivingcars    carsharing      autonomousdriving"
+    "music              mapping         mapping"
+    "erlkonig           mapping         mapping"
+    "smartcities        innovation      advice2";
+}
+
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: red;
+    margin: 1rem 0rem;
+}
