@@ -3,7 +3,7 @@ html { box-sizing: border-box; }
 
 body {
     display: grid;
-    grid-template-columns: 1fr, minmax(auto, 80rem) 1fr;
+    grid-template-columns: 1fr, minmax(auto) 1fr;
     grid-template-rows: 5rem 1fr auto;
     grid-template-areas:
       ". header ."
@@ -17,6 +17,10 @@ img {
     max-width: 100%;
     }
 
+video {
+    max-width: 100%;
+    }
+
 h5 {
     font-size: 2.5rem;
     font-weight: 400;
@@ -26,11 +30,12 @@ h5 {
 h3 {
     font-size: 3rem;
     font-weight: 900;
+    line-height: 4rem;
     letter-spacing: -0.1rem;
 }
 
 h2 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     letter-spacing: -0.1rem;
 }
 
@@ -38,30 +43,52 @@ h2 {
     grid-area: header;
     position: absolute;
     top: 0; left: 0;
-    width: 100%; height: 5rem;
+    width: 100%;
+    height: 5rem;
     display: flex;
+    align-items: center;
     justify-content: center;
-    background: white;
-}
+    background: #ececec;
+    }
 
     .navigation {
-        width: 100%;    
-    } 
+        margin: 0 1rem;
+        border-right: 1px
+    }
 
     .navigation-items {
         display: flex;
         list-style: none;
+        color: grey;
+        margin: 0rem;
     }
-    
-    .nav-link {
-        margin: 0rem 1rem;
-        text-decoration: none;
+
+    .fas-search {
+        padding-left: 2rem;
         color: black;
     }
 
-    .header_bmwcountry {
-        
+    .nav-link {
+        text-decoration: none;
+        color: grey;
+        margin: 0rem 1rem 0rem 0rem; 
     }
+
+        .nav-link:hover {
+            color: #639bee;
+        }
+
+    .header_bmwcountry {
+        font-size: 0.8rem;
+        font-weight: 900;
+        color: black;
+    }
+
+    .bmw-logo {
+        position: relative;
+        height: 45%;
+    }
+    
 
 .main {
     grid-area: main;
@@ -70,45 +97,83 @@ h2 {
     .herogrid {
         display: grid;
         grid-template-columns: repeat(2, 50rem);
-        grid-template-rows: repeat(2, 56.2rem);
+        grid-template-rows: repeat(2, 50rem);
         grid-template-areas:
         "upperone upperone"
         "videoleft videoright";
+        grid-gap: 0.3rem;
+    }
+
+    .hero-link {
+        background-position: top;
     }
 
     .tile-link {
-        position: relative;
         display: flex;
     }
 
     .text-hero {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    margin: 0em 0.5em;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        margin: 0rem 0rem 8rem 5rem;
+        line-height: 5rem;
+    }
+
+    .text-leftright {
+        margin: 0rem 0rem 3rem 3rem;
+        position: absolute;
+    }
+
+        .subheading {
+            margin: 0rem;
+        }
+
+        .heading {
+            margin: 0 0 2.5rem 0;
+        }
+
+    .readmore {
+        font-size: 0.8rem;
+        font-weight: 900;
+        text-align: center;
+        text-decoration-line: none;
+        color: white;
+        border: 3px solid white;
+        padding: 0rem 1rem;
+        margin: 0rem;
+        width: 30%; 
+        line-height: 2rem;
     }
 
     .upperone {
         grid-area: upperone;
+        display: flex;
+        align-items: flex-end;
     }
 
     .videoleft {
         grid-area: videoleft;
+        display: flex;
+        align-items: flex-end;
     }
 
     .videoright {
         grid-area: videoright;
+        display: flex;
+        align-items: flex-end;
     }
 
     .find-your-bmw {
-        display: block;
         width: 100%;
-        height: 15rem;
+        height: 13rem;
         text-align: center;
         line-height: 0.7rem;
         padding: 0rem;
+        margin: 3rem 0rem;
         }
+
         .heading-uppercase {
             text-transform: uppercase;
             font-size: 6rem; 
@@ -124,7 +189,7 @@ h2 {
     .to-watch-grid{
         display: grid;
         grid-template-columns: repeat(3, 33rem);
-        grid-template-rows: repeat(6, 20rem);
+        grid-template-rows: repeat(6, 18.5em);
         grid-template-areas:
         "acceleration       acceleration    advice1"
         "acceleration       acceleration    design"
@@ -132,96 +197,229 @@ h2 {
         "music              mapping         mapping"
         "erlkonig           mapping         mapping"
         "smartcities        innovation      advice2";
+        grid-gap: 0.3rem;
     }
 
     .acceleration {
         grid-area: acceleration;
+        display: flex;
+        align-items: flex-end;
     }
 
     .advice1 {
         grid-area: advice1;
+        display: flex;
+        align-items: flex-end;
     }
 
     .design {
         grid-area: design;
+        display: flex;
+        align-items: flex-end;
     }
 
     .selfdrivingcars {
         grid-area: selfdrivingcars;
+        display: flex;
+        align-items: flex-end;
     }
 
     .carsharing {
         grid-area: carsharing;
+        display: flex;
+        align-items: flex-end;
     }
 
     .autonomousdriving {
         grid-area: autonomousdriving;
+        display: flex;
+        align-items: flex-end;
     }
 
     .music {
         grid-area: music;
+        display: flex;
+        align-items: flex-end;
     }
 
     .mapping {
         grid-area: mapping;
+        display: flex;
+        align-items: flex-end;
     }
 
     .erlkonig {
         grid-area: erlkonig;
+        display: flex;
+        align-items: flex-end;
     }
 
     .smartcities {
         grid-area: smartcities;
+        display: flex;
+        align-items: flex-end;
     }
 
     .innovation {
         grid-area: innovation;
+        display: flex;
+        align-items: flex-end;
     }
 
     .advice2 {
-        grid-area: advice2
+        grid-area: advice2;
+        display: flex;
+        align-items: flex-end;
     }
 
-
     .tile-text {
-        position: relative;
+        position: absolute;
         align-self: flex-end;
         font-size: 1.3rem;
-        color: black;
+        color: white;
         letter-spacing: -0.03em;
         margin: 1em;
+        line-height: 1.5rem;
+        }
+
+        .headline {
+            margin: 0.5rem 0;
         }
 
         .subject {
             font-weight: 900;
+            margin: 0.5rem 0;
+        }
+
+    .buttonshow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }    
+        
+        .showmore {
+            font-size: 1rem;
+            font-weight: 900;
+            text-decoration: none;
+            color: black;
+            border: 3px solid black;
+            padding: 0rem 1rem;
+            margin: 3rem 3rem;
+            line-height: 2rem;
         }
 
 .footer {
     grid-area: footer;
-    background-color: black;
-    /* color: beige;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; */
-    padding: 5rem 20rem;
+    display: grid;
+    grid-template-columns: 1fr minmax(auto) 1fr;
+    grid-template-rows: 1fr minmax(auto);
+    grid-template-areas:
+    ".  language      language   .          ."
+    ".  column1       column2    column3    ."
+    ".  footer-text   .          .          .";
+    background-color: #333333;
     }
 
     .language {
-        margin: 0rem;
+        grid-area: language;
     }
 
-    .language-list {
-        display: flex;
-    }   
+        .language-list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            list-style: none;
+            padding: 0rem;
+            margin: 3rem 0rem;
+        }   
 
-    .lang-link {
-        color: grey;
+        .lang-link {
+            color: grey;
+            text-decoration: none;
+            margin: 0rem 3rem 0rem 0rem;
+        }
+
+        .lang-link:hover {
+            color: white;
+        }
+
+    .column1 {
+        grid-area: column1;
         list-style: none;
-        text-decoration: none;
-        padding: 0rem 1rem;
     }
 
-    .colomn {
-        display: flex;
-        flex-direction: column;
+    .column2 {
+        grid-area: column2;
+        list-style: none;
+    }
+
+    .column3 {
+        grid-area: column3;
+        list-style: none;
+    }
+
+    .footer_subheads {
+        font-weight: 900;
+        font-size: 1.3rem;
+        color: white;
+    }
+    
+        .footer_subheads::after {
+            content: "";
+            position: relative;
+            top: 1rem;
+            left: 0px;
+            width: 20rem;
+            height: 1px;
+            background: grey;
+            display: block;
+        }
+
+    .colomn-link {
+        color: grey;
+        text-decoration: none;
+        line-height: 2.5rem;
+    }
+
+        .colomn-link:hover {
+            color: white;
+        }
+
+    .footer-text {
+        grid-area: footer-text;
+        font-weight: 900;
+        font-size: 1.2rem;
+        margin: 3rem 0rem;
+        color: white;
+    }
+}
+
+
+@media screen and (max-width: 45rem) {
+    body { grid-template-rows: auto;
+    }
+
+    .tile-link {
+        grid-template-columns: 1fr; 
+        grid-template-rows: minmax(15rem, auto) auto;
+        grid-template-areas:
+        "upperone"
+        "videoleft"
+        "videoright"
+        "acceleration"
+        "advice1"
+        "design"
+        "selfdrivingcars"
+        "carsharing"
+        "autonomousdriving"
+        "music"
+        "mapping"
+        "erlkonig"
+        "smartcities"
+        "innovation"
+        "advice2"
+        "language"
+        "column1"
+        "column2"
+        "column3"
     }
